@@ -42,11 +42,11 @@ document.querySelector('.check').addEventListener('click', function () {
     } else if (guess > secretNumber) {
         if(score > 1) {
         document.querySelector('.message').textContent = 'Check Your Number buddy Too High 📈📈📈';
-        document.querySelector('body').style.backgroundColor = '#990000';
         score--;
         document.querySelector('.score').textContent = score;
         } else {
             document.querySelector('.message').textContent ='You Lose the Game📉🤷‍♂️🫡🥺 ';
+            document.querySelector('body').style.backgroundColor = '#990000'
             document.querySelector('.score').textContent = 0;
         }
 
@@ -54,11 +54,11 @@ document.querySelector('.check').addEventListener('click', function () {
     } else if ( guess < secretNumber){
         if (score > 1) {
 		document.querySelector('.message').textContent ='Check Your Number buddy Too Low 📉📉📉';
-        document.querySelector('body').style.backgroundColor = '#990000';
 		score--;
 		document.querySelector('.score').textContent = score;
 		} else {
 		document.querySelector('.message').textContent ='You Lose the Game📉🤷‍♂️🫡🥺';
+        document.querySelector('body').style.backgroundColor = '#990000'
 		document.querySelector('.score').textContent = 0;
 				}
     } 
