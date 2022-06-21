@@ -41,7 +41,7 @@ document.querySelector('.check').addEventListener('click', function () {
         // When the number is too high 
     } else if (guess > secretNumber) {
         if(score > 1) {
-        document.querySelector('.message').textContent = 'Check Your Number buddy Too High 📈📈📈';
+        document.querySelector('.message').textContent = ' Your Number is Too High !!!📈📈📈 Try again!!!';
         score--;
         document.querySelector('.score').textContent = score;
         } else {
@@ -53,7 +53,7 @@ document.querySelector('.check').addEventListener('click', function () {
         // When the number is too low 
     } else if ( guess < secretNumber){
         if (score > 1) {
-		document.querySelector('.message').textContent ='Check Your Number buddy Too Low 📉📉📉';
+		document.querySelector('.message').textContent ='Your Number is Too Low 📉📉📉 Try again !!!';
 		score--;
 		document.querySelector('.score').textContent = score;
 		} else {
