@@ -2,7 +2,7 @@
 
 Guess My Number is a game that required you to guess the exact number, you have 19 chance to guess the number, also a highs score that let you know how far and good you are in this game.
 
-![Number](./Images/Number%201.jpg)
+![<img src="./Images/Number%201.jpg" width="190"/>](./Images/Number%201.jpg)
 ![Number](./Images/Number%202.jpg)
 ![Number](./Images/Number%203.jpg)
 ![Number](./Images/Number%204.jpg)
