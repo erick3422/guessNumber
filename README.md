@@ -1,6 +1,14 @@
-# Guess My Number 
+# About  
 
-Under Construction Project 
+Guess My Number is a game that required you to guess the exact number, you have 19 chance to guess the number, also a highs score that let you know how far and good you are in this game.
+
+![Number](./Images/Number%201.jpg)
+
+
+
+
+
+
 
 ### Important link here 
  Future link Here
@@ -31,6 +39,3 @@ Under Construction Project
 
 Run the app in the development mode. Open localhost to view in the browser.
 Page reload each tim you make edits. You will also see any lint errors in the console.
-
-
-![Construction](./Construction.jpg)
