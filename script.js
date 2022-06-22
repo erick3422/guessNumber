@@ -17,60 +17,77 @@ console.log(document.querySelector('.guess').value);
 
 */
 
+// Initial State of Game 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 let score = 20;
+let highScore = 0;
 
 
 
-document.querySelector('.check').addEventListener('click', function () {
+
+const displayMessage = function (message) {
+    document.querySelector('.message').textContent = message;
+}
+const displayNumber = function (number) {
+    document.querySelector('.number').textContent = number;
+}
+
+const displayScore = function(content) {
+    document.querySelector('.score').textContent = content;
+}
+
+const displayHighScore = function(content) {
+    document.querySelector('.highscore').textContent = content;
+}
+
+document.querySelector('.check').addEventListener('click', function (event) {
+     // Prevent the page to refresh when interact with it 
+     event.preventDefault();
+
 	const guess = Number(document.querySelector('.guess').value)
-
-
-
-    // When is no input 
+	
+	// When is no input
 	if (!guess) {
-		document.querySelector('.message').textContent = 'Choose a number between 1 and 20 ⚠️⚠️⚠️⚠️⚠️⚠️'
+		displayMessage('Choose a number between 1 and 20 ⚠️⚠️⚠️⚠️⚠️⚠️')
 
-        // When Player wins the game
+		// When Player wins the game
 	} else if (guess === secretNumber) {
-        document.querySelector('.message').textContent = 'You win!🏆🏆🏆';
-        document.querySelector('.number').textContent = secretNumber
-        document.querySelector('body').style.backgroundColor = '#60b347';
-        document.querySelector('.number').style.width = '30rem';
-        // When the number is too high 
-    } else if (guess > secretNumber) {
-        if(score > 1) {
-        document.querySelector('.message').textContent = ' Your Number is Too High !!!📈📈📈 Try again!!!';
-        score--;
-        document.querySelector('.score').textContent = score;
-        } else {
-            document.querySelector('.message').textContent ='You Lose the Game📉🤷‍♂️🫡🥺 ';
-            document.querySelector('body').style.backgroundColor = '#990000'
-            document.querySelector('.score').textContent = 0;
-        }
+		displayMessage('You win!🏆🏆🏆');
+		displayNumber(secretNumber);
+		document.querySelector('body').style.backgroundColor = '#60b347';
+		document.querySelector('.number').style.width = '30rem';
 
-        // When the number is too low 
-    } else if ( guess < secretNumber){
-        if (score > 1) {
-		document.querySelector('.message').textContent ='Your Number is Too Low 📉📉📉 Try again !!!';
-		score--;
-		document.querySelector('.score').textContent = score;
+        // Player High Score
+        if (score > highScore) {
+            highScore = score;
+            displayHighScore(highScore);
+        }
+	} else if (guess !== secretNumber) {
+		// When the number is too high or low
+		if (score > 1) {
+			displayMessage(
+				guess > secretNumber
+					? ' Your Number is Too High !!!📈📈📈 Try again!!!'
+					: 'Your Number is Too Low 📉📉📉 Try again !!!'
+			);
+			score--;
+			displayScore(score);
 		} else {
-		document.querySelector('.message').textContent ='You Lose the Game📉🤷‍♂️🫡🥺';
-        document.querySelector('body').style.backgroundColor = '#990000'
-		document.querySelector('.score').textContent = 0;
-				}
-    } 
+			displayMessage('You Lose the Game📉🤷‍♂️🫡🥺');
+			document.querySelector('body').style.backgroundColor = '#990000';
+			displayScore(0);
+		}
+	}
 })
 
-
+// Reset Game to Initial State 
 document.querySelector('.again').addEventListener('click', function () {
     score = 20;
     secretNumber = Math.trunc(Math.random() * 20) + 1;
-    document.querySelector('.message').textContent = 'Star guessing....';
-    document.querySelector('.score').textContent = score;
-    document.querySelector('.number').textContent = '?';
+    displayMessage('Star guessing....');
+    displayScore(score);
+    displayNumber('?');
     document.querySelector('.guess').value = '';
     document.querySelector('body').style.backgroundColor = '#222';
     document.querySelector('.number').style.width = '15rem'
