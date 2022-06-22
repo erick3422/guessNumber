@@ -119,6 +119,10 @@ h1 {
   margin-bottom: 2rem;
 }
 
+img[alt="Number1"] {
+  max-width: 20px;
+  display: block;
+}
 
 /* ======================= IPHONE 12 PRO ============================ */
 
