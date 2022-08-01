@@ -149,7 +149,7 @@ h1 {
   position: absolute;
   width: 100%;
   top: 52%;
-  left: 70%;
+  left: 67%;
   transform: translate(-50%, -50%,);
 }
 
@@ -174,7 +174,7 @@ header {
   font-size: 1.4rem;
   position: absolute;
   top: 2rem;
-  right: -2rem;
+  right: -1.5rem;
 }
 
 .again {
