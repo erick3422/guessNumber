@@ -127,7 +127,7 @@ h1 {
 .left {
   position: absolute;
   top: 65rem;
-  left: 3rem;
+  left: 2rem;
   width: 52rem;
   display: flex;
   flex-direction: column;
@@ -149,7 +149,7 @@ h1 {
   position: absolute;
   width: 100%;
   top: 52%;
-  left: 75%;
+  left: 70%;
   transform: translate(-50%, -50%,);
 }
 
@@ -174,7 +174,7 @@ header {
   font-size: 1.4rem;
   position: absolute;
   top: 2rem;
-  right: -2.7rem;
+  right: -2.5rem;
 }
 
 .again {
