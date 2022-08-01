@@ -126,7 +126,7 @@ h1 {
 
 .left {
   position: absolute;
-  top: 68rem;
+  top: 65rem;
   left: 4rem;
   width: 52rem;
   display: flex;
@@ -136,8 +136,8 @@ h1 {
 
 .right {
   position:absolute;
-  top: 55rem;
-  left: 16rem;
+  top: 53rem;
+  left: 13rem;
   width: 52rem;
   font-size: 2rem;
 }
@@ -179,7 +179,7 @@ header {
 
 .again {
   position: absolute;
-  top: 90rem;
+  top: 86rem;
   left: 21rem;
 }
 
@@ -212,8 +212,8 @@ header {
 
 .message {
   position: absolute;
-  top: -10rem;
-  right: 19rem;
+  top: -12rem;
+  right: 22rem;
 }
 
 .label-score {
