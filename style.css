@@ -127,7 +127,7 @@ h1 {
 .left {
   position: absolute;
   top: 65rem;
-  left: 4rem;
+  left: 3rem;
   width: 52rem;
   display: flex;
   flex-direction: column;
@@ -174,7 +174,7 @@ header {
   font-size: 1.4rem;
   position: absolute;
   top: 2rem;
-  right: -3rem;
+  right: -2.7rem;
 }
 
 .again {
